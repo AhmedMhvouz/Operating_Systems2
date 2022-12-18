@@ -94,11 +94,11 @@ public static void main(String[] args) {
     Thread prroducerWorker1 = new Thread(producer);
     Thread prroducerWorker2 = new Thread(producer);
 
-    consumerWorker1.setPriority(10);
-    consumerWorker2.setPriority(9);
+    consumerWorker1.setPriority(5);
+    consumerWorker2.setPriority(5);
     
-    prroducerWorker1.setPriority(10);
-    prroducerWorker2.setPriority(9);
+    prroducerWorker1.setPriority(5);
+    prroducerWorker2.setPriority(5);
     
     
     consumerWorker1.start();
