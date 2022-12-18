@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
- */
 package testconsumerproducer3;
 
 import java.util.ArrayList; 
@@ -98,6 +94,13 @@ public static void main(String[] args) {
     Thread prroducerWorker1 = new Thread(producer);
     Thread prroducerWorker2 = new Thread(producer);
 
+    consumerWorker1.setPriority(10);
+    consumerWorker2.setPriority(9);
+    
+    prroducerWorker1.setPriority(10);
+    prroducerWorker2.setPriority(9);
+    
+    
     consumerWorker1.start();
     consumerWorker2.start();
     prroducerWorker1.start();
